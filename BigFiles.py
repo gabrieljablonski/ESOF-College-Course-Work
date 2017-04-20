@@ -1,13 +1,13 @@
 import os
 
-folder=os.path.abspath('.')
-os.chdir(folder)
+folder=os.path.abspath('.')  #get absolute path for directory
+os.chdir(folder) #change working directory to desired one
 bigFiles=[]
 bigFolders=[]
 
 for foldername, subfolders, filenames in os.walk(folder):
     for subfolder in subfolders:
-        if os.path.getsize(os.path.abspath(foldername)+'\\'+subfolder)>=(100*1024**2):
+        if os.path.getsize(os.path.abspath(foldername)+'\\'+subfolder)>=(100*1024**2): 
             bigFolders.append(subfolder)
     for filename in filenames:
         if os.path.getsize(os.path.abspath(foldername)+'\\'+filename)>=(100*1024**2):
