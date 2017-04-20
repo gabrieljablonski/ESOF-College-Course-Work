@@ -1,3 +1,6 @@
+#! python3
+# Simulates a mad libs game from a preset text file.
+
 import re
 
 fileOP=open('madlibs.txt', 'r')
